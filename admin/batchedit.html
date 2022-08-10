@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Datails Batch</title>
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- custom css -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header" class=""></div>
+    <section>
+        <div class="container paddings">
+            <div class="row mx-3 ">
+                <div class="col mb-3">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <div class="container">
+                                <h5 class="text-muted text-center">Edit Batch</h5>
+                                <form action="">
+                                    <div class="row mx-2">
+                                        <div class="col-md-12 form-group mb-3">
+                                            <label for="batch-name">Batch Name</label>
+                                            <input type="text" name="batch-name" id="batch-name"
+                                                class="form-control form-control-sm mt-2"
+                                                placeholder="Enter Batch Name">
+                                        </div>
+                                        <div class="col-md-12 form-group mb-3">
+                                            <label for="course-name">Course Name</label>
+                                            <select name="course" id="course" class="form-select form-select-sm mt-2">
+                                                <option selected disabled>Choose Your Course</option>
+                                                <option value="1">Java Web Developement</option>
+                                                <option value="2">Web Developement with PHP</option>
+                                                <option value="3">Programming Fundamental Course</option>
+                                                <option value="4">IOS Devleoper Course</option>
+                                                <option value="5">Andriod Developer Course</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="col-md-12 form-group mb-3">
+                                            <label for="batch-photo">Photo Upload</label>
+                                            <input type="file" name="batch-photo" id="batch-photo"
+                                                class="form-control form-control-sm mt-2"
+                                                placeholder="Enter Batch Name">
+                                        </div>
+                                        <div class="col-md-12 form-group mb-3">
+                                            <label for="description">Description</label>
+                                            <textarea class="form-control mt-2" name="description" id="description"
+                                                rows="5" style="resize: none;"></textarea>
+                                        </div>
+                                        <div class="d-flex justify-content-end mb-2">
+                                            <button type="submit" class="btn btn-outline-success btn-sm me-2">Add
+                                                Batch</button>
+                                            <button type="reset" class="btn btn-outline-danger btn-sm">Cancel</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Start Model Area -->
+    <!-- start teacher model form -->
+    <div id="teacherModal" class="modal">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Teacher</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-12">
+                        <form action="">
+                            <div class="form-group mb-2">
+                                <label for="name">Teacher Name</label>
+                                <input type="text" name="name" id="name" class="form-control form-control-sm" />
+                            </div>
+                            <div class="form-group mb-2">
+                                <label for="teacher-phone">Teacher Phone</label>
+                                <input type="text" name="teacher-phone" id="teacher-phone"
+                                    class="form-control form-control-sm" />
+                            </div>
+                            <div class="form-group mb-2">
+                                <label for="teacher-email">Teacher Email</label>
+                                <input type="email" name="teacher-email" id="teacher-email"
+                                    class="form-control form-control-sm" />
+                            </div>
+                            <div class="form-group mb-2">
+                                <label for="joinDate">Join Date</label>
+                                <input type="date" name="joinDate" id="joinDate" class="form-control form-control-sm" />
+                            </div>
+                            <div class="d-flex justify-content-end mb-3">
+                                <button type="submit" class="btn btn-outline-success btn-sm me-2">Add Teacher</button>
+                                <button type="reset" class="btn btn-outline-danger btn-sm">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end teacher model form -->
+    <!-- start student model form -->
+    <div id="studentModal" class="modal">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Student</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-12">
+                        <form action="">
+                            <div class="form-group mb-2">
+                                <label for="name">Student Name</label>
+                                <input type="text" name="name" id="name" class="form-control form-control-sm" />
+                            </div>
+                            <div class="form-group mb-2">
+                                <label for="student-phone">Student Phone</label>
+                                <input type="text" name="student-phone" id="student-phone"
+                                    class="form-control form-control-sm" />
+                            </div>
+                            <div class="form-group mb-2">
+                                <label for="student-email">Student Email</label>
+                                <input type="email" name="student-email" id="student-email"
+                                    class="form-control form-control-sm" />
+                            </div>
+                            <div class="form-group mb-2">
+                                <label for="joinDate">Join Date</label>
+                                <input type="date" name="joinDate" id="joinDate" class="form-control form-control-sm" />
+                            </div>
+                            <div class="d-flex justify-content-end mb-3">
+                                <button type="submit" class="btn btn-outline-success btn-sm me-2">Add Student</button>
+                                <button type="reset" class="btn btn-outline-danger btn-sm">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end student model form -->
+    <!--End Model Area -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // date
+            $("#startDate").flatpickr();
+            $('.js-example-basic-multiple').select2();
+            $("#student").select2();
+            $('#header').load('admin-navbar.html');
+        });
+    </script>
+</body>
+
+</html>
